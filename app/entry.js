@@ -5,7 +5,7 @@ import bootstrap from 'bootstrap';
 
 $('.availability-toggle-button').each((i, e) => {
   const button = $(e);
-  button.click(() => {
+  button.on('click', () => {
     const scheduleId = button.data('schedule-id');
     const userId = button.data('user-id');
     const candidateId = button.data('candidate-id');
@@ -26,7 +26,7 @@ $('.availability-toggle-button').each((i, e) => {
 });
 
 const buttonSelfComment = $('#self-comment-button');
-buttonSelfComment.click(() => {
+buttonSelfComment.on('click', () => {
   const scheduleId = buttonSelfComment.data('schedule-id');
   const userId = buttonSelfComment.data('user-id');
   const comment = prompt('コメントを255文字以内で入力してください。');
